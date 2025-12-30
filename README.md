@@ -1,15 +1,5 @@
 # Oh My Posh Custom Themes 🎨
 
-Welcome to the **Oh My Posh Custom Themes** repository! This project offers a collection of custom themes for [Oh My Posh](https://ohmyposh.dev), a prompt theme engine that transforms your terminal into a visually stunning and functional workspace.
-
-## 🌟 Features
-- 🎨 A variety of custom themes to enhance your shell prompt.
-- ⚙️ Easy to use and customize.
-- 🖼️ Previews of each theme for easy selection.
-- 🚀 Optimized for an improved user experience in the terminal.
-
-## Quick Preview
-<!-- ![App Screenshot](./Assets/Screenshot%20.png) -->
 <div align="center">
 
 ![App Screenshot](./Assets/Screenshot-u.png)
@@ -27,13 +17,15 @@ Before using the custom themes, ensure you have the following installed:
   - Zsh
   - Fish
 
-## 🚀 Quick Start
+## 🚀 Quick Install
 
 Follow these steps to get started with the custom themes:
 
 1. **Install Oh My Posh**  
 
-   Make sure you have installed Oh My Posh by following the official [installation guide](https://ohmyposh.dev/docs/installation).
+   ```bash
+      winget install JanDeDobbeleer.OhMyPosh --source winget
+   ```
 
 2. **Clone the Repository**  
 
@@ -44,25 +36,19 @@ Follow these steps to get started with the custom themes:
    cd Oh-my-posh-Castom-Thmes
    ```
 
+3. **Create a PowerShell Profile and Openit in Notepad**
 
-4. **Get Powershell Path**
-
-```shell
-$env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin"
-```
-
-4. **Create a PowerShell Profile and Openit in Notepad**
-
-   To set up Oh My Posh, you'll need to create or edit your PowerShell profile. This profile runs every time a new PowerShell session starts.
    ```bash
    notepad $PROFILE
    ```
-   If the file does not exist, PowerShell will create it. This profile script runs every time a new PowerShell session starts.
-   
-5. **Add Theme Configuration to PowerShell Profile**:
 
-   After opening your PowerShell profile in Notepad, you’ll need to add a line to configure Oh My Posh with a custom theme from this repository:
-   Add the following line to your profile
+   If the file does not exist,
+   ```bash
+   New-Item -Path $PROFILE -Type File -Force
+   ```
+
+   
+4. **Add Theme Configuration to PowerShell Profile**:
 
    ```bash
    oh-my-posh init pwsh --config '<path-to-your-cloned-repository>' | Invoke-Expression
@@ -70,11 +56,15 @@ $env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin"
 
 # **Install Terminal Icons**  
 
+<div align="center">
+
+![Terminal-Icon](./Assets/SS-Term-Icon.png)
+</div>
+
 ```shell
 Install-Module -Name Terminal-Icons -Repository PSGallery
 Import-Module -Name Terminal-Icons
 ```
-
 # notepad $PROFILE (For Windows)
 
 ```bash
@@ -82,8 +72,52 @@ Import-Module -Name Terminal-Icons
 Import-Module -Name Terminal-Icons
 ```
 
+# **Install [Fastfetch](https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file)**  
 
+<div align="center">
 
+![Fast-Fetch](./Assets/SS-Fastfetch.png)
+</div>
+
+1. **Install Fastfetch**  
+
+   ```bash
+      winget install fastfetch
+   ```
+
+2. **Clone the Repository**  
+
+   Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/sakibtalukqder/Oh-my-posh-Castom-Thmes.git
+   cd terminal\FastFetch
+   ```
+
+2. **Add config.json to pwsh profile**  
+
+```bash
+
+# Minimal profile: UTF‑8 + Oh My Posh (if installed) + Fastfetch with explicit config path
+# try {
+#     [Console]::InputEncoding  = [System.Text.Encoding]::UTF8
+#     [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+#     $OutputEncoding = [System.Text.UTF8Encoding]::new($false)
+#     chcp 65001 > $null
+# } catch {}
+
+# Clear-Host
+
+# Force Fastfetch to use YOUR config every time (bypass path confusion)
+if (Get-Command fastfetch -ErrorAction SilentlyContinue) {
+    fastfetch -c "C:/Users/readoy/.config/fastfetch/config.jsonc"
+}
+echo ""
+oh-my-posh init pwsh --config 'C:\Users\readoy\Documents\PowerShell\shell.omp.json' | Invoke-Expression
+
+Import-Module -Name Terminal-Icons
+
+```
 
 <div align="center">
 <br>
