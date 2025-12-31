@@ -32,7 +32,7 @@ Follow these steps to get started with the custom themes:
    Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/sakibtalukqder/Oh-my-posh-Castom-Thmes.git
+   git clone https://github.com/readoy-cse/my_Terminal.git
    cd Oh-my-posh-Castom-Thmes
    ```
 
@@ -53,7 +53,7 @@ Follow these steps to get started with the custom themes:
    ```bash
    oh-my-posh font install
    ```
-   <p style="background-color: #fff3b0; padding: 8px; font-weight: bold; border-left: 4px solid #f7c600;">
+   <p style="background-color: #fff3b0; padding: 8px; font-weight: bold; border-left: 4px solid #da4105ff;">
    🚨 Note: Run Terminal as Administrator, for font installation
    </p>
 
@@ -100,7 +100,7 @@ Import-Module -Name Terminal-Icons
    Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/sakibtalukqder/Oh-my-posh-Castom-Thmes.git
+   git clone https://github.com/readoy-cse/my_Terminal.git
    cd terminal\FastFetch
    ```
 
@@ -120,14 +120,17 @@ Import-Module -Name Terminal-Icons
 
 # Force Fastfetch to use YOUR config every time (bypass path confusion)
 if (Get-Command fastfetch -ErrorAction SilentlyContinue) {
-    fastfetch -c "C:/Users/readoy/.config/fastfetch/config.jsonc"
+    fastfetch -c "<Path to fastfetch/config.json >"
 }
 echo ""
-oh-my-posh init pwsh --config 'C:\Users\readoy\Documents\PowerShell\shell.omp.json' | Invoke-Expression
-
+oh-my-posh init pwsh --config '< path to shell.omp.json >' | Invoke-Expression
 Import-Module -Name Terminal-Icons
 
 ```
+
+   <p style="background-color: #fff3b0; padding: 8px; font-weight: bold; border-left: 4px solid #da4105ff;">
+   🚨 Note: chenge the ascii file path form fastfetch/config.json line:5
+   </p>
 
 <div align="center">
 <br>
