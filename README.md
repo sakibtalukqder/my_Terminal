@@ -53,7 +53,10 @@ Follow these steps to get started with the custom themes:
    ```bash
    oh-my-posh font install
    ```
-   #### Note: Run terminsl as adminstrator, For font instrallation
+   <p style="background-color: #fff3b0; padding: 8px; font-weight: bold; border-left: 4px solid #f7c600;">
+   🚨 Note: Run Terminal as Administrator, for font installation
+   </p>
+
 
 5. **Add Theme Configuration to PowerShell Profile**:
 
