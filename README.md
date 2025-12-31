@@ -53,6 +53,7 @@ Follow these steps to get started with the custom themes:
    ```bash
    oh-my-posh font install
    ```
+   #### Note: Run terminsl as adminstrator, For font instrallation
 
 5. **Add Theme Configuration to PowerShell Profile**:
 
