@@ -24,7 +24,7 @@ Follow these steps to get started with the custom themes:
 1. **Install Oh My Posh**  
 
    ```bash
-      winget install JanDeDobbeleer.OhMyPosh --source winget
+   winget install JanDeDobbeleer.OhMyPosh --source winget
    ```
 
 2. **Clone the Repository**  
@@ -48,7 +48,13 @@ Follow these steps to get started with the custom themes:
    ```
 
    
-4. **Add Theme Configuration to PowerShell Profile**:
+4. **Install mono Fonts, To fix the broken fonts**:
+
+   ```bash
+   oh-my-posh font install
+   ```
+
+5. **Add Theme Configuration to PowerShell Profile**:
 
    ```bash
    oh-my-posh init pwsh --config '<path-to-your-cloned-repository>' | Invoke-Expression
